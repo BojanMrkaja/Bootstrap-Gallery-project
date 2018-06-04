@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Photo Gallery project</title>
+
+    <style>
+        body {
+            background: #7E8F7C;
+           
+        }
+
+        nav {
+            font-weight: bold;
+            color: black;
+            font-family: 'Fontin';
+            font-size: 20px;
+
+        }
+
+        nav li a:hover {
+            background: lightgreen;
+            color: #3a7999;
+            box-shadow: inset 0 0 0 3px #3a7999;
+        }
+        
+       
+        
+
+        h3 {
+            font-family: fantasy;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#nav" data-offset="50">
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-secondary justify-content-between sticky-top" style="opacity: 0.9" id="nav">
+        <a href="#" class="navbar-brand">
+       <img src="img/Photo%20Gallery.jpg" alt="photo gallery" width="100">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#carousel" class="nav-link">Carousel Photo Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="#modal" class="nav-link">Modal Photo Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="#light" class="nav-link">Lightbox Gallery</a>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <input type="search" class="form-control mr-sm-2" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <br>
+
+    <hr>
+
+    <!--Carousel-->
+
+
+    <div class="container" id="carousel">
+        <h3 class="display-4" style="margin-bottom:30px"> Carousel Photo Gallery</h3>
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/cat.jpg" alt="Los Angeles" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/grass.jpg" alt="Chicago" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/seal.jpg" alt="New York" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/dog.jpg" alt="New York" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/tiger.jpg" alt="New York" width="1100" height="500">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+
+    <!--Modal Photo Gallery-->
+
+    <div class="container" id="modal">
+        <h3 class="display-4" style="margin: auto"> Modal Photo Gallery</h3>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="thumbnail" data-toggle="modal" data-target="#m1">
+                <img src="img/img1.jpg" alt="nature" width="300" height="200" class="rounded">
+                </a>
+                <div class="modal fade" id="m1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 style="margin-left:300px">Image 1</h3>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body" style="margin: auto">
+                                <img src="img/img1.jpg" class="img-thumbnail" style="padding-left: 0px">
+                            </div>
+                            <div class="modal-footer">
+                                <p style="margin: auto"><strong>This is first image</strong></p>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">
+                                Close
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="thumbnail" data-toggle="modal" data-target="#m2">
+                <img src="img/img2.jpg" alt="nature" width="300" height="200" class="rounded">
+                </a>
+                <div class="modal fade" id="m2" style="border: none;">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 style="margin-left:300px">Image 2</h3>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body" style="margin: auto">
+                                <img src="img/img2.jpg" class="img-thumbnail" style="padding-left: 0px;">
+                            </div>
+                            <div class="modal-footer">
+                                <p style="margin: auto"><strong>This is second image</strong></p>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">
+                                Close
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="thumbnail" data-toggle="modal" data-target="#m3">
+                <img src="img/img3.jpg" alt="nature" width="300" height="200" class="rounded">
+                </a>
+                <div class="modal fade" id="m3">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 style="margin-left:300px">Image 3</h3>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body" style=" margin: auto">
+                                <img src="img/img3.jpg" class="img-thumbnail" style="padding-left:0px;">
+                            </div>
+                            <div class="modal-footer">
+                                <p style="margin: auto"><strong>This is thirt image</strong></p>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">
+                                Close
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="thumbnail" data-toggle="modal" data-target="#m4">
+                <img src="img/img4.jpg" alt="nature" width="300" height="200" class="rounded">
+                </a>
+                <div class="modal fade" id="m4">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 style="margin-left:300px">Image 4</h3>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body" style="margin: auto">
+                                <img src="img/img4.jpg" class="img-thumbnail" style="padding-left:">
+                            </div>
+                            <div class="modal-footer">
+                                <p style="margin: auto"><strong>This is fourth image</strong></p>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">
+                                Close
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="thumbnail" data-toggle="modal" data-target="#m5">
+                <img src="img/img5.jpg" alt="nature" width="300" height="200" class="rounded">
+                </a>
+                <div class="modal fade" id="m5">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 style="margin-left:300px">Image 5</h3>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body" style="margin: auto">
+                                <img src="img/img5.jpg" class="img-thumbnail" style="padding-left:0px;">
+                            </div>
+                            <div class="modal-footer">
+                                <p style="margin: auto"><strong>This is fivth image</strong></p>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">
+                                Close
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="thumbnail" data-toggle="modal" data-target="#m6">
+                <img src="img/img6.jpg" alt="nature" width="300" height="200" class="rounded">
+                </a>
+                <div class="modal fade" id="m6">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 style="margin-left:300px">Image 6</h3>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body" style="margin: auto">
+                                <img src="img/img6.jpg" class="img-thumbnail" style="padding-left:0px;">
+                            </div>
+                            <div class="modal-footer">
+                                <p style="margin: auto"><strong>This is sixth image</strong></p>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">
+                                Close
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div class="container" id="light">
+        <h3 class="display-4">Lightbox Gallery</h3>
+        <div class="row">
+            <div class="col-md-4" style="padding-bottom: : 20px">
+                <a href="img/nature/animal.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/animal.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/nature/black.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/black.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/nature/insect.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/insect.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="img/nature/kur.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/kur.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/nature/nature.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/nature.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/nature/panda.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/panda.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="img/nature/snow.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/snow.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/nature/turkey.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/turkey.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/nature/wolf.jpg" class="thumbnail" data-lightbox="gallery">
+                    <img src="img/nature/wolf.jpg" alt="" width="300" height="200" class="rounded rounded-circle">
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <br>
+    <footer class="navbar navbar-light bg-dark">
+        <div class="container">
+            <p class="text-center" style="margin: auto;color: white"><span>&copy;</span>Copyright Reserved by Mrkaja Bojan</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
